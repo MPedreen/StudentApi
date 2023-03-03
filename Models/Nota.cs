@@ -1,7 +1,6 @@
 public class Nota
 {
-    public int Id { get; set; }
-    public int Valor { get; set; }
-    public int EstudanteId { get; set; }
-    public Estudante Estudante { get; set; }
+    public int NotaId { get; set; }
+    public string NotaNome { get; set; }
+    public virtual IEnumerable<Estudante> Estudantes  { get; set; }
 }
