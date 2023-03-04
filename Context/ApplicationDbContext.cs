@@ -16,5 +16,6 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new CursoConfiguration());
+        modelBuilder.ApplyConfiguration(new EstudanteConfiguration());
     }
 }
