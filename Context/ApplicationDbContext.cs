@@ -10,4 +10,9 @@ public class ApplicationDbContext : DbContext
     public DbSet<EnderecoEstudante> EnderecosEstudante { get; set; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+
+    }
 }
