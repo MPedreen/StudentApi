@@ -1,3 +1,5 @@
+namespace Models;
+
 public class Serie
 {
     public int Id { get; set; }

@@ -1,6 +1,8 @@
+using Configurations;
 using Microsoft.EntityFrameworkCore;
+using Models;
 
-namespace Infrastructure.Database.Context;
+namespace Context;
 
 public class ApplicationDbContext : DbContext
 {
@@ -11,8 +13,8 @@ public class ApplicationDbContext : DbContext
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-    protected override void OnModelCreating(ModelBuilder builder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
+        modelBuilder.ApplyConfiguration(new CursoConfiguration());
     }
 }

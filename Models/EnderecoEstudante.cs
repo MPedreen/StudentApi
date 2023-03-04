@@ -1,3 +1,5 @@
+namespace Models;
+
 public class EnderecoEstudante
 {
     public int Id { get; set; }

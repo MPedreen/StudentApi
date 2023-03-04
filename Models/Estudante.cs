@@ -1,3 +1,5 @@
+namespace Models;
+
 public class Estudante
 {
     public int Id { get; set; }

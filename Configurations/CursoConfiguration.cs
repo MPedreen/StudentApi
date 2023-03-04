@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Models;
 
-namespace Infrastructure.Database.Configurations;
+namespace Configurations;
 
 public class CursoConfiguration : IEntityTypeConfiguration<Curso>
 {

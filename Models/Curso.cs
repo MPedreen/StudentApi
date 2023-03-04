@@ -1,3 +1,5 @@
+namespace Models;
+
 public class Curso
 {
     public int Id { get; set; }
