@@ -10,6 +10,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Estudante> Estudantes { get; set; }
     public DbSet<Serie> Series { get; set; }
     public DbSet<EnderecoEstudante> EnderecosEstudante { get; set; }
+    public DbSet<CursoEstudante> CursosEstudantes { get; set; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 

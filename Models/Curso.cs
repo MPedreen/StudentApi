@@ -6,4 +6,5 @@ public class Curso
     public string Nome { get; set; }
     public string Descricao { get; set; }
     public virtual IEnumerable<Estudante> Estudantes { get; set; }
+    public virtual IEnumerable<CursoEstudante> CursosEstudantes { get; set; }
 }

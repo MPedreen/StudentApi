@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Models;
 
+namespace Configurations;
+
 public class EstudanteConfiguration : IEntityTypeConfiguration<Estudante>
 {
     public void Configure(EntityTypeBuilder<Estudante> builder)
@@ -19,14 +21,5 @@ public class EstudanteConfiguration : IEntityTypeConfiguration<Estudante>
         builder.HasOne(e => e.Endereco)
             .WithOne(wo => wo.Estudante)
             .HasForeignKey<EnderecoEstudante>(fk => fk.IdEstudante);
-
-        builder.HasMany(e => e.Cursos)
-            .WithMany(wm => wm.Estudantes)
-            .UsingEntity<CursoEstudante>(
-                x => x.HasOne(ho => ho.Curso)
-                    .WithMany(),
-                x => x.HasOne(ho => ho.Estudante)
-                    .WithMany()
-    );
     }
 }
