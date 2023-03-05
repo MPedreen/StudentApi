@@ -21,5 +21,9 @@ public class EstudanteConfiguration : IEntityTypeConfiguration<Estudante>
         builder.HasOne(e => e.Endereco)
             .WithOne(wo => wo.Estudante)
             .HasForeignKey<EnderecoEstudante>(fk => fk.IdEstudante);
+
+        builder.HasOne(e => e.Serie)
+            .WithMany(s => s.Estudantes)
+            .HasForeignKey(e => e.IdSerie);
     }
 }
