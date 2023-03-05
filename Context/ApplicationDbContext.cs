@@ -18,5 +18,7 @@ public class ApplicationDbContext : DbContext
     {
         modelBuilder.ApplyConfiguration(new CursoConfiguration());
         modelBuilder.ApplyConfiguration(new EstudanteConfiguration());
+        modelBuilder.ApplyConfiguration(new CursosEstudantesConfiguration());
+        modelBuilder.ApplyConfiguration(new EnderecoConfiguration());
     }
 }
